@@ -1,6 +1,6 @@
-# DWService
-
-Documentação de instalação, configuração e utilização do DWService.
+---
+layout: page
+---
 
 ## Documentos disponíveis
 
@@ -9,7 +9,5 @@ Documentação de instalação, configuração e utilização do DWService.
 - [Roteiro DWService (PDF)](./roteiro_DWservice.pdf)
 
   Instruções para instalação e configuração do DWService.
-
-## Voltar
 
 [Voltar à Central de Documentos](../)

@@ -1,6 +1,6 @@
-# Central de Documentos
-
-Páginas WEB LTS | Tutoriais, Manuais e Instalações
+---
+layout: home
+---
 
 ## Documentos disponíveis
 
