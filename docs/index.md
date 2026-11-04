@@ -1,4 +1,7 @@
-# Central de Documentos LTS
+---
+layout: page
+title: Central de Documentos LTS
+---
 
 Páginas WEB LTS | Tutoriais, Manuais e Instalações
 
