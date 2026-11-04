@@ -2,8 +2,6 @@
 layout: page
 ---
 
-## Documentos disponíveis
-
 ### Guias e procedimentos
 
 - [Roteiro DWService (PDF)](./roteiro_DWservice.pdf)
