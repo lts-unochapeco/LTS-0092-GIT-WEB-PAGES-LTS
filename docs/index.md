@@ -1,9 +1,7 @@
 ---
 layout: page
-title: ''
+title: Central de Ferramentas
 ---
-
-# Central de Ferramentas
 
 Bem-vindo à central de ferramentas do **Laboratório de Tecnologia em Software (LTS)**.
 
@@ -34,6 +32,9 @@ Ferramentas utilizadas para acessar e administrar computadores remotamente.
   - Configuração
   - Compartilhamento de acesso
   - Gerenciamento de dispositivos
+  
+
+---
 
 ### Sistemas e ferramentas
 
