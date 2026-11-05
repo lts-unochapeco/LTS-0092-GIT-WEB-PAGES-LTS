@@ -3,11 +3,11 @@ layout: page
 title: Central de Ferramentas
 ---
 
+---
+
 Bem-vindo à central de ferramentas do **Laboratório de Tecnologia em Software (LTS)**.
 
 Aqui você encontra tutoriais, manuais, procedimentos técnicos e materiais de apoio para utilização das ferramentas e sistemas do laboratório.
-
----
 
 ## Começando
 
