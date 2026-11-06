@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111f39">
+  <meta name="description"
+    content="Portal LTS de serviços técnicos, ferramentas de ensaio, integridade SHA-256, XML e minutas DTC e LCL.">
+  <title>Central de Ferramentas e Serviços Técnicos | LTS</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/catalogo.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <a href="#inicio" class="identity" aria-label="LTS início">
+        <span class="identity-logo">L<span>T</span>S<span class="accent">.</span></span>
+        <span class="identity-caption">LABORATÓRIO DE<br><strong>TECNOLOGIAS EM SOFTWARE</strong></span>
+      </a>
+      <button class="close-menu" id="close-menu" type="button" aria-label="Fechar menu">×</button>
+      <div class="side-caption">PORTAL TÉCNICO · V1.1</div>
+      <nav class="side-nav">
+        <a class="active" href="#inicio" data-nav><span>01</span> Visão geral</a>
+        <a href="#servicos" data-nav><span>02</span> Serviços do LTS</a>
+        <a href="#ferramentas" data-nav><span>03</span> Ferramentas</a>
+        <a href="#laboratorio" data-nav><span>04</span> Laboratório digital</a>
+        <a href="#laudos" data-nav><span>05</span> Laudos DTC / LCL</a>
+        <a href="#referencias" data-nav><span>06</span> Normas e referências</a>
+      </nav>
+      <div class="side-footer">
+        <p class="public-status"><span class="status-dot"></span> Ambiente de consulta pública</p>
+        <p>Ferramentas selecionadas para os processos de trabalho do LTS.</p>
+        <a href="https://lts.unochapeco.edu.br/" target="_blank" rel="noopener noreferrer">Site institucional ↗</a>
+      </div>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <button id="open-menu" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="sidebar">☰</button>
+        <div class="crumb">LTS <span>/</span> Portal de recursos <span>/</span> <strong>Ferramentas</strong></div>
+        <div class="top-links"><span><i class="status-dot"></i> Disponível para consulta</span><a
+            href="https://lts.unochapeco.edu.br/" target="_blank" rel="noopener noreferrer">Portal LTS ↗</a></div>
+      </header>
+      <main id="conteudo">
+        <section class="hero" id="inicio">
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-circle"></div>
+            <div class="art-circle inner"></div>
+          </div>
+          <div class="hero-content">
+            <div class="eyebrow"><b></b> ECOSSISTEMA DIGITAL / LTS</div>
+            <h1>Tecnologia aplicada à<br><span>conformidade de software.</span></h1>
+            <p>Ferramentas e metodologias para diagnóstico técnico, ensaios funcionais, integridade de arquivos,
+              documentação e suporte à homologação.</p>
+            <div class="hero-buttons"><a href="#ferramentas" class="btn btn-mint">Explorar ferramentas
+                <span>→</span></a><a href="#laboratorio" class="btn btn-outline">Laboratório digital</a></div>
+          </div>
+          <div class="hero-caption"><span>● LTS / UNOCHAPECÓ</span><span>ENGENHARIA · QUALIDADE · EVIDÊNCIA</span></div>
+        </section>
+
+        <div class="metrics" aria-label="Resumo do portal">
+          <div><strong>03</strong><span>Trilhas de serviço<small>Piloto, DTC e LCL</small></span></div>
+          <div><strong>24</strong><span>Recursos catalogados<small>Seis domínios técnicos</small></span></div>
+          <div><strong>R$ 0</strong><span>Hospedagem base<small>GitHub Pages em repositório público</small></span></div>
+        </div>
+
+        <section class="section" id="servicos">
+          <div class="section-title">
+            <div>
+              <div class="kicker">01 — PROCESSOS DE TRABALHO</div>
+              <h2>Serviços técnicos do LTS</h2>
+              <p>Trilhas com escopo, evidências e documentação apropriados para cada etapa.</p>
+            </div><span class="section-aside">TRÊS MODALIDADES</span>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-eyebrow"><strong>01 / P</strong><span>AVALIAÇÃO PRELIMINAR</span></div>
+              <h3>Projeto Piloto</h3>
+              <p>Estudo inicial de viabilidade, delimitação de escopo e execução exploratória de testes, com
+                identificação de ajustes e riscos.</p>
+              <div class="service-tags">Plano de testes · Evidências · Relatório</div><a href="#ferramentas"
+                data-link-filter="ensaios">Ferramentas para ensaios <span>→</span></a>
+            </article>
+            <article class="service-card">
+              <div class="service-eyebrow"><strong>02 / D</strong><span>DIAGNÓSTICO</span></div>
+              <h3>DTC <small>Diagnóstico Técnico de Conformidade</small></h3>
+              <p>Avaliação técnica estruturada por requisitos, testes e evidências, com consolidação de resultados para
+                análise interna.</p>
+              <div class="service-tags">Requisitos · Testes · Minuta XML</div><a href="apps/laudos/?tipo=dtc">Editor de
+                minuta DTC <span>→</span></a>
+            </article>
+            <article class="service-card">
+              <div class="service-eyebrow"><strong>03 / L</strong><span>CONFORMIDADE LEGAL</span></div>
+              <h3>LCL <small>Laudo de Conformidade à Legislação</small></h3>
+              <p>Fluxo de análise conforme regulamentação e roteiro aplicável da SEF/SC, sujeito à revisão, aprovação e
+                assinatura autorizada.</p>
+              <div class="service-tags">Atos DIAT · Roteiro funcional · LCL</div><a href="apps/laudos/?tipo=lcl">Editor
+                de minuta LCL <span>→</span></a>
+            </article>
+          </div>
+          <p class="footnote">O editor DTC/LCL incluído nesta versão gera <strong>minutas não oficiais</strong>. A
+            emissão de laudos com validade institucional depende de procedimentos e integrações específicas.</p>
+        </section>
+
+        <section class="section" id="ferramentas">
+          <div class="section-title">
+            <div>
+              <div class="kicker">02 — SOFTWARE E UTILITÁRIOS</div>
+              <h2>Catálogo de ferramentas</h2>
+              <p>Seleção de aplicativos gratuitos ou com edição comunitária, com links oficiais e aplicação no LTS.</p>
+            </div><span class="section-aside" id="tool-count">24 FERRAMENTAS</span>
+          </div>
+          <div class="filters"><label class="search" for="tool-search"><span aria-hidden="true">⌕</span><input
+                type="search" id="tool-search" placeholder="Buscar DWService, XML, Git, SHA-256…"
+                autocomplete="off"><kbd>/</kbd></label>
+            <div class="filter-chips" id="filters" role="group" aria-label="Categorias de ferramentas"><button
+                type="button" class="chip selected" data-filter="todos" aria-pressed="true">Todas</button><button
+                type="button" class="chip" data-filter="remoto" aria-pressed="false">Acesso remoto</button><button
+                type="button" class="chip" data-filter="integridade" aria-pressed="false">Integridade /
+                criptografia</button><button type="button" class="chip" data-filter="xml" aria-pressed="false">XML e
+                assinaturas</button><button type="button" class="chip" data-filter="desenvolvimento"
+                aria-pressed="false">Desenvolvimento</button><button type="button" class="chip" data-filter="ensaios"
+                aria-pressed="false">Ensaios</button><button type="button" class="chip" data-filter="documentos"
+                aria-pressed="false">Documentos</button></div>
+          </div>
+          <div class="catalog-grid" id="catalog-grid" aria-live="polite"></div>
+          <div class="empty" id="empty-result" hidden>Nenhuma ferramenta encontrada. Ajuste a busca ou a categoria.
+          </div>
+          <p class="footnote">Links de referência externos. Verifique a licença e as políticas de uso antes de instalar
+            ferramentas em equipamentos institucionais.</p>
+        </section>
+
+        <section class="section" id="laboratorio">
+          <div class="section-title">
+            <div>
+              <div class="kicker">03 — PROCESSAMENTO LOCAL</div>
+              <h2>Laboratório digital</h2>
+              <p>Utilitários que executam no navegador e não enviam os arquivos ao GitHub Pages.</p>
+            </div><span class="section-aside">WEB CRYPTO · DOMPARSER</span>
+          </div>
+          <div class="lab-grid">
+            <article class="lab-card">
+              <div class="lab-icon">#</div>
+              <h3>Verificação de integridade <span>SHA-256</span></h3>
+              <p>Calcule o hash de um arquivo e compare com uma referência. SHA-256 é um resumo criptográfico, não
+                criptografia de dados.</p>
+              <label class="drop-file" id="drop-zone" for="hash-file"><span
+                  class="upload-icon">⇧</span><strong>Selecionar arquivo para SHA-256</strong><small>Ou arraste um
+                  arquivo até aqui (limite: 200 MB)</small><input type="file" id="hash-file"></label>
+              <div class="file-detail" id="hash-name">Nenhum arquivo selecionado.</div>
+              <label class="form-label" for="hash-expected">Hash esperado (opcional)</label><input class="field-input"
+                id="hash-expected" type="text" maxlength="64" spellcheck="false"
+                placeholder="64 caracteres hexadecimais">
+              <div class="lab-buttons"><button class="btn btn-dark" id="hash-run" type="button">Calcular
+                  SHA-256</button><button class="btn btn-light" id="hash-copy" type="button" disabled>Copiar
+                  hash</button></div>
+              <output class="output" id="hash-output">O resultado aparecerá aqui.</output>
+              <div class="hash-status" id="hash-status" role="status" aria-live="polite"></div>
+              <details class="command-reference">
+                <summary>Comandos para Windows e Linux</summary>
+                <div>Windows PowerShell</div>
+                <pre>Get-FileHash -Path "C:\arquivo.zip" -Algorithm SHA256</pre>
+                <div>Linux</div>
+                <pre>sha256sum arquivo.zip</pre>
+              </details>
+            </article>
+            <article class="lab-card">
+              <div class="lab-icon">&lt;/&gt;</div>
+              <h3>Inspeção de XML <span>Sintaxe e estrutura</span></h3>
+              <p>Confira se o arquivo XML é bem formado, identifique elemento raiz e namespace. Não valida XSD,
+                assinatura ou legislação.</p>
+              <label class="form-label" for="xml-file">Carregar arquivo XML (até 5 MB)</label><input class="field-input"
+                id="xml-file" type="file" accept=".xml,application/xml,text/xml">
+              <label class="form-label" for="xml-text">Ou cole o conteúdo</label><textarea class="field-input textarea"
+                id="xml-text" rows="7" spellcheck="false"
+                placeholder="&lt;documento&gt;...&lt;/documento&gt;"></textarea>
+              <div class="lab-buttons"><button class="btn btn-dark" id="xml-run" type="button">Inspecionar
+                  XML</button><button class="btn btn-light" id="xml-clear" type="button">Limpar</button></div>
+              <output class="output" id="xml-output">O diagnóstico sintático aparecerá aqui.</output>
+              <p class="lab-note"><strong>Limitação:</strong> XML bem formado não significa XML válido para SEF/SC nem
+                assinatura digital verificada.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="laudos">
+          <div class="section-title">
+            <div>
+              <div class="kicker">04 — APLICAÇÕES WEB LTS</div>
+              <h2>Laudos DTC, LCL e assinatura digital</h2>
+              <p>Separação entre a elaboração de documentos e os controles necessários à emissão oficial.</p>
+            </div><span class="section-aside">ARQUITETURA EVOLUTIVA</span>
+          </div>
+          <div class="app-feature">
+            <div class="app-orbit" aria-hidden="true"><span>XML</span><span>✓</span><span>DSig</span></div>
+            <div><span class="tag-success">DISPONÍVEL · MÓDULO DE MINUTAS</span>
+              <h3>Editor de minutas DTC e LCL</h3>
+              <p>Formulários responsivos, geração de XML de rascunho, exportação JSON e impressão de resumo, com
+                processamento local e sem assinatura eletrônica.</p><a href="apps/laudos/" class="btn btn-mint">Abrir o
+                editor <span>→</span></a>
+            </div>
+          </div>
+          <div class="roadmap">
+            <div><span class="step done">01</span><strong>Minuta e metadados</strong><small>Implementado nesta
+                versão</small></div>
+            <div><span class="step">02</span><strong>Leiaute e XSD oficiais</strong><small>Depende de versão
+                homologada</small></div>
+            <div><span class="step">03</span><strong>XMLDSig / ICP-Brasil</strong><small>Integração segura
+                autorizada</small></div>
+            <div><span class="step">04</span><strong>Auditoria e guarda</strong><small>Backend institucional
+                protegido</small></div>
+          </div>
+          <p class="security-note"><strong>Segurança:</strong> não publique arquivos sigilosos, certificados digitais
+            privados, senhas, contratos ou laudos oficiais no GitHub Pages. A assinatura deve ser feita com controles
+            institucionais adequados.</p>
+        </section>
+
+        <section class="section" id="referencias">
+          <div class="section-title">
+            <div>
+              <div class="kicker">05 — BASE NORMATIVA</div>
+              <h2>Legislação e referências</h2>
+              <p>Consulte sempre a versão oficial vigente e os anexos aplicáveis antes de executar o trabalho técnico.
+              </p>
+            </div><span class="section-aside">FONTES INSTITUCIONAIS</span>
+          </div>
+          <div class="resources">
+            <a href="https://www.sef.sc.gov.br/saiba-mais/nfc-e-nota-fiscal-de-consumidor-eletronica" target="_blank"
+              rel="noopener noreferrer"><span class="resource-symbol">SC</span><span><strong>SEF/SC — NFC-e e
+                  regulamentação PAF</strong><small>Atos DIAT nº 54/2026 e nº 56/2026, especificações e anexos para
+                  OTH/LCL.</small></span><i>↗</i></a>
+            <a href="https://legislacao.sef.sc.gov.br/html/atos_diat/2026/atodiat_26_062.htm" target="_blank"
+              rel="noopener noreferrer"><span class="resource-symbol">62</span><span><strong>Ato DIAT nº
+                  62/2026</strong><small>Alterações normativas relacionadas ao Ato DIAT nº
+                  54/2026.</small></span><i>↗</i></a>
+            <a href="https://validar.iti.gov.br/" target="_blank" rel="noopener noreferrer"><span
+                class="resource-symbol">ITI</span><span><strong>VALIDAR — ITI</strong><small>Verificação oficial de
+                  assinaturas eletrônicas nos formatos aceitos pelo serviço.</small></span><i>↗</i></a>
+            <a href="https://www.gov.br/iti/pt-br/assuntos/repositorio/artefatos-de-assinatura-digital" target="_blank"
+              rel="noopener noreferrer"><span class="resource-symbol">ICP</span><span><strong>Referências de assinatura
+                  digital ICP-Brasil</strong><small>Artefatos e padrões técnicos pertinentes à assinatura e sua
+                  interoperabilidade.</small></span><i>↗</i></a>
+          </div>
+          <div class="guide-callout">
+            <div>
+              <div class="kicker">PUBLICAÇÃO E INTEGRAÇÃO INSTITUCIONAL</div>
+              <h3>Um portal. Duas formas de acesso.</h3>
+              <p>Publique como endereço independente ou incorpore no menu Ferramentas usando <code>?embed=1</code>. A
+                publicação estática dispensa tema Jekyll.</p>
+            </div><a class="btn btn-dark" href="guia.html">Ver o passo a passo <span>→</span></a>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div><strong>LTS — Laboratório de Tecnologias em Software</strong>
+          <p>Centro de recursos técnicos para apoio aos processos do LTS / Unochapecó.</p>
+        </div>
+        <div>VERSÃO 1.1 <span>·</span> <a href="guia.html">Guia de publicação</a></div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+CENTRAL DE FERRAMENTAS LTS - VERSAO 1.1
+Regenerado em 06/11/2026
+
+Projeto: LTS-0092-GIT-WEB-PAGES-LTS
+Destino: https://github.com/lts-unochapeco/LTS-0092-GIT-WEB-PAGES-LTS
+Endereco: https://lts-unochapeco.github.io/LTS-0092-GIT-WEB-PAGES-LTS/
+
+ARQUIVOS PRINCIPAIS
+index.html                  Pagina inicial do portal
+assets/                     CSS, JavaScript e marca visual
+apps/laudos/                Editor de minutas DTC e LCL
+.nojekyll                   Desativa build Jekyll para site estatico
+guia.html                   Guia passo a passo na web
+GUIA_PUBLICACAO_LTS.md     Manual completo para Windows/Linux
+INTEGRACAO_SITE_LTS.html   Trecho iframe para o site institucional
+TEMA_ATLAS_E_JEKYLL.md    Orientacao sobre theme: Atlas
+
+PASSOS RESUMIDOS
+1) Extraia o ZIP.
+2) Use uma conta GitHub com permissao de escrita.
+3) Clone o repositorio e copie os arquivos extraidos para sua raiz.
+4) Preserve os arquivos preexistentes do repositorio, como README.md e dwservice/.
+5) Confira git status, commit e push para o branch de publicacao.
+6) Configure Settings > Pages > Deploy from a branch > main > /(root),
+   desde que essa seja a origem da publicacao atual.
+7) Teste a pagina inicial e o editor de minutas.
+8) Incorpore ao menu Ferramentas do LTS, se o CMS permitir iframe.
+
+O site nao usa theme: Atlas nem Jekyll; .nojekyll deve permanecer na raiz.
+O editor de laudos nao gera laudos oficiais nem realiza assinatura ICP-Brasil.
+Validacao SHA-256 requer HTTPS ou localhost.

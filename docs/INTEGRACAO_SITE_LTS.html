@@ -1,0 +1,28 @@
+<!--
+  INTEGRACAO: copie o trecho para o bloco HTML do menu Ferramentas do site LTS.
+  O CMS pode remover scripts ou bloquear iframes: nesse caso, use somente o link externo.
+-->
+<div class="lts-tools-embed" style="width:100%;max-width:1500px;margin:0 auto">
+  <iframe id="lts-tools-frame" title="LTS - Central de Ferramentas e Serviços Técnicos"
+    src="https://lts-unochapeco.github.io/LTS-0092-GIT-WEB-PAGES-LTS/?embed=1" loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    style="width:100%;min-height:1400px;border:0;display:block"></iframe>
+  <p style="font:13px system-ui,sans-serif;color:#5c7080;margin:8px 0">
+    Se o conteúdo não aparecer, <a href="https://lts-unochapeco.github.io/LTS-0092-GIT-WEB-PAGES-LTS/" target="_blank"
+      rel="noopener noreferrer">abra a Central de Ferramentas em outra aba</a>.
+  </p>
+</div>
+<script>
+  (function () {
+    'use strict';
+    var frame = document.getElementById('lts-tools-frame');
+    window.addEventListener('message', function (event) {
+      if (event.origin !== 'https://lts-unochapeco.github.io') return;
+      if (event.source !== frame.contentWindow) return;
+      if (!event.data || event.data.type !== 'lts-pages-height') return;
+      var height = Number(event.data.height);
+      if (!Number.isFinite(height)) return;
+      frame.style.height = Math.min(Math.max(height + 20, 600), 20000) + 'px';
+    });
+  }());
+</script>

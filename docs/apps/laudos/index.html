@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111f39">
+  <meta name="description"
+    content="Editor local de minutas não oficiais DTC e LCL — Laboratório de Tecnologias em Software.">
+  <title>Editor de Minutas DTC / LCL | LTS</title>
+  <link rel="icon" href="../../assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="laudos.css">
+  <script src="laudos.js" defer></script>
+</head>
+
+<body>
+  <header class="editor-header"><a class="editor-brand" href="../../index.html">L<span>T</span>S.</a>
+    <div>Ferramentas <span>/</span> <strong>Editor de minutas DTC / LCL</strong></div><a href="../../index.html#laudos"
+      class="editor-back">← Voltar ao portal</a>
+  </header>
+  <main class="editor-body">
+    <div class="editor-intro">
+      <div class="kicker">MÓDULO LTS · PROTÓTIPO OPERACIONAL</div>
+      <h1>Editor de minutas <span>DTC / LCL</span></h1>
+      <p>Registre os metadados básicos do atendimento e exporte um XML de rascunho para avaliação interna. Nenhum dado
+        do formulário é enviado ao GitHub Pages.</p>
+    </div>
+    <div class="editor-alert"><span aria-hidden="true">!</span>
+      <div><strong>Documento não oficial. Não constitui laudo nem homologação.</strong>
+        <p>O XML possui namespace interno de protótipo e não representa o leiaute/XSD oficial da SEF/SC. Não contém
+          assinatura ICP-Brasil. Utilize somente informações fictícias ou autorizadas.</p>
+      </div>
+    </div>
+    <div class="editor-grid">
+      <section class="editor-card">
+        <div class="editor-card-head">
+          <div>
+            <div class="kicker">01 — DADOS DO ATENDIMENTO</div>
+            <h2>Preenchimento da minuta</h2>
+          </div><small>FORMULÁRIO</small>
+        </div>
+        <form id="draft-form">
+          <div class="form-grid">
+            <div class="field"><label for="tipo">Tipo de documento *</label><select id="tipo" required>
+                <option value="DTC">DTC — Diagnóstico Técnico de Conformidade</option>
+                <option value="LCL">LCL — Laudo de Conformidade à Legislação</option>
+              </select></div>
+            <div class="field"><label for="referencia">Referência interna *</label><input id="referencia" required
+                maxlength="70" placeholder="Ex.: LTS-TESTE-001"></div>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="empresa">Empresa desenvolvedora *</label><input id="empresa" required
+                maxlength="160" placeholder="Razão social"></div>
+            <div class="field"><label for="cnpj">CNPJ (opcional)</label><input id="cnpj" inputmode="numeric"
+                maxlength="18" placeholder="00.000.000/0000-00"></div>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="software">Aplicação / sistema *</label><input id="software" required
+                maxlength="130" placeholder="Nome do software"></div>
+            <div class="field"><label for="versao">Versão analisada *</label><input id="versao" required maxlength="60"
+                placeholder="Ex.: 3.2.1"></div>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="responsavel">Responsável pela minuta *</label><input id="responsavel"
+                required maxlength="120" placeholder="Identificação autorizada"></div>
+            <div class="field"><label for="data">Data de referência *</label><input id="data" type="date" required>
+            </div>
+          </div>
+          <div class="field"><label for="escopo">Escopo e critérios de referência *</label><textarea id="escopo"
+              required maxlength="3000" rows="3"
+              placeholder="Requisitos e condições considerados na análise"></textarea></div>
+          <div class="field"><label for="evidencias">Resumo das evidências e dos testes *</label><textarea
+              id="evidencias" required maxlength="5000" rows="4"
+              placeholder="Evidências observadas no ambiente de ensaio"></textarea></div>
+          <div class="field"><label for="resultado">Estado preliminar *</label><select id="resultado" required>
+              <option value="EM_ANALISE">Em análise</option>
+              <option value="PENDENCIAS">Pendências identificadas</option>
+              <option value="ANALISE_INTERNA_CONCLUIDA">Análise interna concluída — sem efeito de homologação</option>
+            </select></div>
+          <div class="field"><label for="observacoes">Observações complementares</label><textarea id="observacoes"
+              maxlength="3000" rows="2" placeholder="Restrições e próximos encaminhamentos"></textarea></div>
+          <div class="form-actions"><button type="submit" class="btn btn-dark">Gerar minuta XML →</button><button
+              type="reset" class="btn btn-light">Limpar</button></div>
+        </form>
+      </section>
+      <div class="editor-stack">
+        <section class="editor-card">
+          <div class="editor-card-head">
+            <div>
+              <div class="kicker">02 — DOCUMENTO</div>
+              <h2>Prévia do XML</h2>
+            </div><small>RASCUNHO</small>
+          </div>
+          <p class="editor-help" id="preview-help">Preencha o formulário e clique em “Gerar minuta XML”.</p>
+          <pre class="xml-code" id="xml-preview" aria-live="polite">&lt;!-- O XML aparecerá aqui. --&gt;</pre>
+          <div class="form-actions"><button type="button" class="btn btn-dark" id="save-xml" disabled>Baixar
+              XML</button><button type="button" class="btn btn-light" id="save-json" disabled>Baixar
+              JSON</button><button type="button" class="btn btn-light" id="print-summary" disabled>Imprimir
+              resumo</button></div>
+          <p class="digest" id="xml-digest" aria-live="polite"></p>
+        </section>
+        <section class="editor-card small-card">
+          <div class="kicker">03 — EVOLUÇÃO DA APLICAÇÃO</div>
+          <h2>Assinatura e validação</h2>
+          <p>Para emitir um documento oficial será necessário integrar:</p>
+          <ol>
+            <li>Leiaute e XSD oficiais com controle de versão.</li>
+            <li>Requisitos, evidências, revisão e aprovação.</li>
+            <li>Identidade e autorização do responsável.</li>
+            <li>XMLDSig / perfil ICP-Brasil exigido.</li>
+            <li>Verificação, guarda e auditoria institucional.</li>
+          </ol><a href="https://validar.iti.gov.br/" target="_blank" rel="noopener noreferrer">VALIDAR / ITI (serviço
+            externo) ↗</a>
+        </section>
+      </div>
+    </div>
+    <section class="summary-print" id="summary-print" aria-label="Resumo para impressão"></section>
+    <footer class="editor-footer">LTS / Unochapecó · Ambiente de protótipo <a href="../../index.html">Voltar à Central
+        de Ferramentas</a></footer>
+  </main>
+</body>
+
+</html>
