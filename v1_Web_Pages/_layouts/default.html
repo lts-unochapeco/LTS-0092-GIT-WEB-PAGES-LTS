@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'pt-BR' }}">
+
+  {% include head.html %}
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+      document.querySelectorAll('.page-content a').forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+    </script>
+
+  </body>
+
+</html>

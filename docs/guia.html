@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guia de implantação da Central de Ferramentas LTS no GitHub Pages.">
+  <title>Guia de Publicação | Central de Ferramentas LTS</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .guide-top {
+      background: #fff;
+      border-bottom: 1px solid #e3e9ef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 18px max(23px, calc((100vw - 1050px)/2))
+    }
+
+    .guide-top a:first-child {
+      font-weight: 1000;
+      color: #12233c;
+      font-size: 22px;
+      letter-spacing: -.12em
+    }
+
+    .guide-top a:last-child {
+      font-size: 11px;
+      color: #167e75;
+      font-weight: 850
+    }
+
+    .guide-main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 40px 22px 65px
+    }
+
+    .guide-hero {
+      background: linear-gradient(110deg, #101e37, #22546a);
+      border-radius: 14px;
+      color: white;
+      padding: 43px;
+      margin-bottom: 23px
+    }
+
+    .guide-hero h1 {
+      font-size: clamp(30px, 4vw, 43px);
+      margin: 15px 0 12px
+    }
+
+    .guide-hero p {
+      color: #c1d4dd;
+      font-size: 12px;
+      line-height: 1.7;
+      max-width: 670px
+    }
+
+    .guide-hero .btn {
+      margin-top: 8px
+    }
+
+    .guide-columns {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 26px
+    }
+
+    .guide-nav {
+      position: sticky;
+      top: 14px;
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      gap: 3px
+    }
+
+    .guide-nav a {
+      font-size: 11px;
+      padding: 10px 12px;
+      color: #718598;
+      border-left: 2px solid #d8e3e8
+    }
+
+    .guide-nav a:hover {
+      border-left-color: #159b84;
+      color: #178d80
+    }
+
+    .guide-section {
+      background: #fff;
+      border: 1px solid #e3e9ef;
+      border-radius: 11px;
+      padding: 27px;
+      margin-bottom: 14px
+    }
+
+    .guide-section h2 {
+      font-size: 23px;
+      margin: 0 0 13px
+    }
+
+    .guide-section p,
+    .guide-section li {
+      font-size: 12px;
+      color: #657789;
+      line-height: 1.75
+    }
+
+    .guide-section li+li {
+      margin-top: 6px
+    }
+
+    .guide-section ol {
+      padding-left: 21px
+    }
+
+    .guide-section pre {
+      border-radius: 8px;
+      background: #13243d;
+      color: #d8efe6;
+      padding: 17px;
+      overflow: auto;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font: 10px/1.85 ui-monospace, Consolas, monospace
+    }
+
+    .guide-section a {
+      color: #108e7b;
+      font-weight: 800
+    }
+
+    .guide-section code {
+      color: #0f8178
+    }
+
+    .guide-note {
+      padding: 13px;
+      border-left: 3px solid #1d9e88;
+      background: #eefaf5;
+      font-size: 11px;
+      color: #396e64;
+      line-height: 1.7
+    }
+
+    .guide-footer {
+      color: #93a2af;
+      font-size: 11px;
+      text-align: center;
+      margin-top: 26px
+    }
+
+    @media(max-width:740px) {
+      .guide-main {
+        padding: 19px 13px 35px
+      }
+
+      .guide-hero {
+        padding: 28px 21px
+      }
+
+      .guide-columns {
+        grid-template-columns: 1fr;
+        gap: 9px
+      }
+
+      .guide-nav {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 15px
+      }
+
+      .guide-nav a {
+        border: 0;
+        border-bottom: 2px solid #d8e3e8;
+        padding: 8px
+      }
+
+      .guide-section {
+        padding: 22px 18px
+      }
+
+      .guide-top {
+        padding: 13px 17px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="guide-top"><a href="index.html">L<span style="color:#169d88">T</span>S.</a><a href="index.html">←
+      Voltar ao portal</a></header>
+  <main class="guide-main">
+    <div class="guide-hero">
+      <div class="eyebrow">MANUAL DE IMPLANTAÇÃO · v1.1</div>
+      <h1>Publique a Central de Ferramentas<br>no GitHub Pages.</h1>
+      <p>Procedimento gratuito, com layout independente de Jekyll e preparação para integração ao site institucional do
+        LTS.</p><a href="GUIA_PUBLICACAO_LTS.md" class="btn btn-mint">Abrir manual técnico completo →</a>
+    </div>
+    <div class="guide-columns">
+      <nav class="guide-nav" aria-label="Etapas da implantação"><a href="#acesso">01 Permissões</a><a href="#arquivo">02
+          Arquivos</a><a href="#pages">03 GitHub Pages</a><a href="#embed">04 Incorporação</a><a href="#laudos">05
+          Laudos oficiais</a></nav>
+      <div>
+        <section class="guide-section" id="acesso">
+          <div class="kicker">ETAPA 01</div>
+          <h2>Verifique a permissão de acesso</h2>
+          <p>A publicação exige uma conta com autorização de escrita no repositório <a
+              href="https://github.com/lts-unochapeco/LTS-0092-GIT-WEB-PAGES-LTS" target="_blank"
+              rel="noopener noreferrer">lts-unochapeco/LTS-0092-GIT-WEB-PAGES-LTS ↗</a>. Se você tiver apenas permissão
+            de leitura, solicite acesso ao administrador.</p>
+        </section>
+        <section class="guide-section" id="arquivo">
+          <div class="kicker">ETAPA 02</div>
+          <h2>Instale os arquivos sem apagar o conteúdo existente</h2>
+          <ol>
+            <li>Baixe o pacote <code>LTS_Ferramentas_Pages_v1.1.zip</code> e extraia-o.</li>
+            <li>Clone o repositório GitHub para sua máquina.</li>
+            <li>Copie a pasta extraída para a raiz, preservando diretórios e documentos que já existam.</li>
+            <li>Confira os arquivos novos e envie as alterações com <code>git add</code>, <code>git commit</code> e
+              <code>git push</code>.
+            </li>
+          </ol>
+          <pre>git clone https://github.com/lts-unochapeco/LTS-0092-GIT-WEB-PAGES-LTS.git
+cd LTS-0092-GIT-WEB-PAGES-LTS
+# Copie os arquivos extraídos do ZIP para a pasta acima.
+git status --short
+git add index.html guia.html .nojekyll assets apps GUIA_PUBLICACAO_LTS.md INTEGRACAO_SITE_LTS.html TEMA_ATLAS_E_JEKYLL.md tests
+git commit -m "feat: portal de ferramentas LTS v1.1"
+git push origin main</pre>
+          <p>O repositório pode ter branch protegida; nesse caso, abra um Pull Request conforme as regras locais.</p>
+        </section>
+        <section class="guide-section" id="pages">
+          <div class="kicker">ETAPA 03</div>
+          <h2>Configure o GitHub Pages</h2>
+          <ol>
+            <li>Abra <strong>Settings → Pages</strong>.</li>
+            <li>Em <strong>Build and deployment</strong>, escolha <strong>Deploy from a branch</strong>.</li>
+            <li>Defina o branch em uso (geralmente <code>main</code>) e a pasta <code>/(root)</code>.</li>
+            <li>Salve e teste o portal, o editor e a rota <code>/?embed=1</code>.</li>
+          </ol>
+          <div class="guide-note"><strong>Sobre o tema Atlas:</strong> o portal utiliza HTML/CSS/JS próprios e o arquivo
+            <code>.nojekyll</code>. Não precisa de <code>theme: Atlas</code> nem de outro tema Jekyll.
+          </div>
+          <p><a href="TEMA_ATLAS_E_JEKYLL.md">Ler a nota sobre Atlas e Jekyll →</a></p>
+        </section>
+        <section class="guide-section" id="embed">
+          <div class="kicker">ETAPA 04</div>
+          <h2>Incorpore no menu Ferramentas</h2>
+          <p>No site <code>lts.unochapeco.edu.br</code>, adicione um link externo ou um bloco HTML com iframe apontando
+            para a URL com <code>?embed=1</code>:</p>
+          <pre>&lt;iframe title="Central de Ferramentas LTS"
+ src="https://lts-unochapeco.github.io/LTS-0092-GIT-WEB-PAGES-LTS/?embed=1"
+ style="width:100%;min-height:1400px;border:0"
+ loading="lazy"&gt;&lt;/iframe&gt;</pre>
+          <p>O arquivo <a href="INTEGRACAO_SITE_LTS.html">INTEGRACAO_SITE_LTS.html</a> contém uma alternativa com ajuste
+            de altura. Se o CMS ou CSP bloquear iframe, mantenha um link externo.</p>
+        </section>
+        <section class="guide-section" id="laudos">
+          <div class="kicker">ETAPA 05</div>
+          <h2>Planeje a emissão oficial DTC / LCL</h2>
+          <p>O editor entregue gera somente <strong>minutas XML não oficiais</strong>. Para assinar e emitir LCL com
+            validade institucional, ainda são necessários XSD e leiaute homologados, validação de requisitos, controle
+            de acesso, assinatura XMLDSig / ICP-Brasil conforme regulamentação e uma trilha de auditoria em backend
+            seguro.</p>
+          <div class="guide-note">Consulte os Atos DIAT nº 54/2026 e nº 56/2026 e suas atualizações na página oficial <a
+              href="https://www.sef.sc.gov.br/saiba-mais/nfc-e-nota-fiscal-de-consumidor-eletronica" target="_blank"
+              rel="noopener noreferrer">SEF/SC — NFC-e ↗</a>.</div>
+        </section>
+      </div>
+    </div>
+    <div class="guide-footer">LTS / Unochapecó · Central de Ferramentas · Versão 1.1</div>
+  </main>
+</body>
+
+</html>
