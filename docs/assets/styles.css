@@ -8,7 +8,7 @@
     --border: #111111;
     --subtle-bg: #d1d5db;
     --extra: var(--ast-global-color-8);
-    --custom-1: #fffffffff;
+    --custom-1: #ffffff;
 
     --navy: #1500A1;
     --ink: #000000;
@@ -1610,52 +1610,219 @@ body.embed .hero-content {
     filter: brightness(0.96);
 }
 
-/* Ajustes finais da paleta institucional */
+
+/* Paleta institucional adaptada à estrutura visual do layout */
 :root {
+    --brand: #1500A1;
+    --brand-alt: #045CB4;
+    --heading: #1500A1;
+    --text: #000000;
+    --surface-primary: #DBCCED5C;
+    --surface-secondary: #d4d4d636;
+    --border: #111111;
+    --subtle-bg: #d1d5db;
+    --extra: var(--ast-global-color-8);
+    --custom-1: #ffffff;
+
+    /* Compatibilidade com os nomes de variáveis já usados no CSS */
+    --navy: var(--brand);
+    --ink: var(--text);
+    --muted: #4b5563;
+    --teal: var(--brand);
+    --mint: var(--brand-alt);
+    --line: var(--border);
+    --surface: var(--custom-1);
+    --canvas: #ffffff;
     color: var(--text);
+    color-scheme: light;
 }
+
+/* Fundo geral branco */
+html,
 body {
+    background: #ffffff;
     color: var(--text);
-    background: var(--subtle-bg);
 }
-h1, h2, h3, .section-title h2, .service-card h3, .lab-card h3,
-.guide-callout h3, .app-feature h3 {
+
+/* Superfícies e áreas de conteúdo */
+.sidebar,
+.topbar,
+.metrics,
+.service-card,
+.filters,
+.tool-card,
+.lab-card,
+.resources,
+.empty,
+.roadmap > div {
+    background: #ffffff;
+}
+
+/* Títulos e conteúdo textual */
+h1, h2, h3,
+.section-title h2,
+.service-card h3,
+.lab-card h3,
+.guide-callout h3,
+.app-feature h3 {
     color: var(--heading);
 }
-p, .identity-caption, .side-caption, .side-nav a, .top-links,
-.crumb, .tool-type, .service-card p, .tool-card p, .lab-card > p {
+
+body,
+p,
+.identity-caption,
+.side-caption,
+.side-nav a,
+.top-links,
+.crumb,
+.tool-type,
+.service-card p,
+.tool-card p,
+.lab-card > p {
     color: var(--text);
 }
-.sidebar, .topbar, .metrics, .service-card, .filters, .tool-card,
-.lab-card, .resources, .empty, .roadmap > div {
-    background: var(--custom-1);
+
+/* Marca e ações principais */
+.identity-logo,
+.identity-logo span,
+.side-footer a,
+.top-links a,
+.side-nav a.active,
+.side-nav a.active span,
+.kicker,
+.service-eyebrow strong,
+.service-card a,
+.tool-card a,
+.resources i,
+.footer a,
+.command-reference summary,
+.guide-callout code,
+.footer strong {
+    color: var(--brand);
 }
-.identity, .side-footer, .topbar, .metrics, .metrics > div + div,
-.service-card, .tool-card, .lab-card, .resources, .footer,
-.command-reference, .tool-card .tool-actions {
+
+.btn-mint,
+.btn-dark,
+.tool-card .tool-actions > a.manual-button {
+    background: var(--brand);
+    color: #ffffff;
+    border-color: var(--brand);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border-color: #ffffff80;
+}
+
+.btn-light,
+.tool-card .tool-actions > a {
+    background: var(--surface-secondary);
+    color: var(--brand);
     border-color: var(--border);
 }
-.side-nav a.active, .chip.selected, .lab-icon, .tool-initials,
-.resource-symbol, .guide-callout, .step.done, .drop-file,
+
+/* Destaques suaves, sem alterar o fundo geral branco */
+.side-nav a.active,
+.chip.selected,
+.lab-icon,
+.tool-initials,
+.resource-symbol,
+.guide-callout,
+.step.done,
+.drop-file,
 .search:focus-within {
     background-color: var(--surface-primary);
 }
-.btn-mint, .btn-dark, .tool-card .tool-actions > a.manual-button {
-    background: var(--brand);
-    color: var(--custom-1);
+
+.btn-light,
+.menu-toggle,
+.close-menu,
+.search kbd,
+.step,
+.tool-card .tool-actions > a {
+    background-color: var(--surface-secondary);
 }
-.btn-light, .tool-card .tool-actions > a {
+
+/* Bordas e campos */
+.identity,
+.side-footer,
+.topbar,
+.metrics,
+.metrics > div + div,
+.service-card,
+.tool-card,
+.lab-card,
+.resources,
+.footer,
+.command-reference,
+.tool-card .tool-actions,
+.search,
+.field-input {
+    border-color: var(--border);
+}
+
+.field-input,
+.search {
+    background: #ffffff;
+    color: var(--text);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline-color: var(--brand-alt);
+}
+
+/* Área de destaque principal: mantém contraste com texto branco */
+.hero,
+.app-feature {
+    background: linear-gradient(119deg, #1500A1 8%, #045CB4 100%);
+    color: #ffffff;
+}
+
+.hero h1,
+.hero .btn,
+.app-feature h3 {
+    color: #ffffff;
+}
+
+.hero h1 span,
+.eyebrow,
+.hero-caption {
+    color: #ffffff;
+}
+
+.hero p,
+.app-feature p {
+    color: #ffffff;
+}
+
+.hero .btn-mint {
+    background: #ffffff;
+    color: var(--brand);
+    border-color: #ffffff;
+}
+
+/* Elementos secundários */
+.service-eyebrow span,
+.tag-success {
+    background: var(--surface-primary);
+    border-color: var(--brand-alt);
+    color: var(--brand);
+}
+
+.security-note {
+    background: var(--surface-primary);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.output,
+.command-reference pre {
     background: var(--surface-secondary);
-    color: var(--brand);
+    color: var(--text);
+    border-color: var(--border);
 }
-a, .service-card a, .tool-card a, .resources i, .footer a,
-.command-reference summary, .guide-callout code {
-    color: var(--brand);
-}
-
-   
-
-    
-    
-    
-    
