@@ -1,15 +1,26 @@
 :root {
-    --navy: #111f39;
-    --ink: #1b2b40;
-    --muted: #718195;
-    --teal: #168d80;
-    --mint: #68e4be;
-    --line: #e3e9ef;
-    --surface: #fff;
-    --canvas: #f6f8fa;
+    --brand: #1500A1;
+    --brand-alt: #045CB4;
+    --heading: #1500A1;
+    --text: #000000;
+    --surface-primary: #DBCCED5C;
+    --surface-secondary: #d4d4d636;
+    --border: #111111;
+    --subtle-bg: #d1d5db;
+    --extra: var(--ast-global-color-8);
+    --custom-1: #fffffffff;
+
+    --navy: #1500A1;
+    --ink: #000000;
+    --muted: #000000;
+    --teal: #1500A1;
+    --mint: #045CB4;
+    --line: #111111;
+    --surface: #ffffff;
+    --canvas: #d1d5db;
     --shadow: 0 9px 22px rgba(27, 48, 71, .036);
     font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    color: #1b2b40;
+    color: #000000;
     color-scheme: light
 }
 
@@ -63,7 +74,7 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-    outline: 3px solid #4aa8e9;
+    outline: 3px solid #045CB4;
     outline-offset: 2px
 }
 
@@ -130,27 +141,27 @@ p {
     font-weight: 1000;
     letter-spacing: -.13em;
     white-space: nowrap;
-    color: #10223b;
+    color: #1500A1;
     line-height: 1
 }
 
 .identity-logo span {
-    color: #159d85
+    color: #045CB4
 }
 
 .identity-logo .accent {
-    color: #ecb46e
+    color: #1500A1
 }
 
 .identity-caption {
     font-size: 9px;
     letter-spacing: .02em;
     line-height: 1.42;
-    color: #8392a2
+    color: #000000
 }
 
 .identity-caption strong {
-    color: #385066;
+    color: #000000;
     font-weight: 830
 }
 
@@ -159,7 +170,7 @@ p {
     font-size: 9px;
     font-weight: 900;
     letter-spacing: .17em;
-    color: #9aa8b7
+    color: #000000
 }
 
 .side-nav {
@@ -174,7 +185,7 @@ p {
     gap: 13px;
     border-radius: 8px;
     padding: 12px;
-    color: #61748a;
+    color: #000000;
     font-size: 12px;
     font-weight: 750
 }
@@ -182,22 +193,22 @@ p {
 .side-nav a span {
     font-size: 10px;
     min-width: 18px;
-    color: #a3b1be;
+    color: #000000;
     font-weight: 900
 }
 
 .side-nav a:hover {
-    background: #f4f8f9;
-    color: #24536a
+    background: #d4d4d636;
+    color: #1500A1
 }
 
 .side-nav a.active {
-    background: #e6f7f1;
-    color: #117b70
+    background: #DBCCED5C;
+    color: #1500A1
 }
 
 .side-nav a.active span {
-    color: #16a88e
+    color: #045CB4
 }
 
 .side-footer {
@@ -215,11 +226,11 @@ p {
 .side-footer a {
     font-size: 11px;
     font-weight: 850;
-    color: #227a79
+    color: #1500A1
 }
 
 .public-status {
-    color: #36556c !important;
+    color: #000000 !important;
     font-weight: 850
 }
 
@@ -227,9 +238,9 @@ p {
     display: inline-block;
     width: 7px;
     height: 7px;
-    background: #25b78d;
+    background: #045CB4;
     border-radius: 50%;
-    box-shadow: 0 0 0 3px #e2f7ed;
+    box-shadow: 0 0 0 3px #DBCCED5C;
     margin-right: 7px
 }
 
@@ -244,7 +255,7 @@ p {
 
 .topbar {
     height: 73px;
-    background: #fff;
+    background: #ffffff;
     border-bottom: 1px solid var(--line);
     display: flex;
     align-items: center;
@@ -254,16 +265,16 @@ p {
 
 .crumb {
     font-size: 11px;
-    color: #8b99a6
+    color: #000000
 }
 
 .crumb span {
     margin: 0 10px;
-    color: #bbc5d0
+    color: #d1d5db
 }
 
 .crumb strong {
-    color: #536578
+    color: #000000
 }
 
 .top-links {
@@ -271,7 +282,7 @@ p {
     align-items: center;
     gap: 20px;
     font-size: 11px;
-    color: #738598
+    color: #000000
 }
 
 .top-links span {
@@ -280,7 +291,7 @@ p {
 
 .top-links a {
     font-weight: 800;
-    color: #2a607d
+    color: #045CB4
 }
 
 .menu-toggle {
@@ -294,7 +305,7 @@ main {
 }
 
 .hero {
-    background: linear-gradient(119deg, #101d36 8%, #152943 63%, #1d465a 100%);
+    background: linear-gradient(119deg, #1500A1 8%, #045CB4 63%, #1500A1 100%);
     border-radius: 15px;
     color: white;
     min-height: 371px;
@@ -314,7 +325,7 @@ main {
 .eyebrow {
     font-size: 10px;
     letter-spacing: .15em;
-    color: #98c4c6;
+    color: #DBCCED;
     font-weight: 900;
     display: flex;
     align-items: center;
@@ -340,7 +351,7 @@ main {
 }
 
 .hero p {
-    color: #b6c9d5;
+    color: #d4d4d636;
     font-size: 13px;
     line-height: 1.75;
     max-width: 510px
@@ -380,23 +391,23 @@ main {
 
 .btn-mint {
     background: var(--mint);
-    color: #102d37
+    color: #ffffff
 }
 
 .btn-outline {
     background: rgba(255, 255, 255, .04);
-    border-color: #7894aa61;
-    color: #fff
+    border-color: #ffffff61;
+    color: #ffffff
 }
 
 .btn-dark {
-    background: #142a45;
+    background: #1500A1;
     color: white
 }
 
 .btn-light {
-    background: #edf3f5;
-    color: #335369
+    background: #d4d4d636;
+    color: #000000
 }
 
 .hero-caption {
@@ -408,9 +419,9 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 12px;
-    border-top: 1px solid #d3e9e71f;
+    border-top: 1px solid #ffffff1f;
     padding: 15px 53px;
-    color: #95b9c8;
+    color: #ffffff;
     font-size: 9px;
     font-weight: 840;
     letter-spacing: .14em
@@ -432,7 +443,7 @@ main {
     top: -182px;
     right: -122px;
     border-radius: 50%;
-    box-shadow: 0 0 0 44px #77e4c509, 0 0 0 100px #77e4c507, 0 0 0 157px #77e4c504
+    box-shadow: 0 0 0 44px #1500A109, 0 0 0 100px #1500A107, 0 0 0 157px #1500A104
 }
 
 .art-circle.inner {
@@ -467,7 +478,7 @@ main {
 }
 
 .metrics strong {
-    color: #164b5d;
+    color: #1500A1;
     font-size: 31px;
     font-weight: 800;
     letter-spacing: -.055em;
@@ -478,7 +489,7 @@ main {
 .metrics span {
     font-size: 11px;
     font-weight: 800;
-    color: #2f465c;
+    color: #000000;
     line-height: 1.5
 }
 
@@ -486,7 +497,7 @@ main {
     display: block;
     font-size: 10px;
     font-weight: 500;
-    color: #8b9aaa
+    color: #000000
 }
 
 .section {
@@ -505,7 +516,7 @@ main {
     font-size: 10px;
     font-weight: 900;
     letter-spacing: .16em;
-    color: #1c9986;
+    color: #1500A1;
     margin-bottom: 11px
 }
 
@@ -524,7 +535,7 @@ main {
 .section-aside {
     font-size: 10px;
     letter-spacing: .1em;
-    color: #9ca9b5;
+    color: #000000;
     font-weight: 870;
     white-space: nowrap;
     margin-bottom: 5px
@@ -556,16 +567,16 @@ main {
 }
 
 .service-eyebrow strong {
-    color: #159686;
+    color: #1500A1;
     font-size: 10px;
     letter-spacing: .09em
 }
 
 .service-eyebrow span {
     padding: 5px 7px;
-    background: #f0f9f6;
-    border: 1px solid #ccece3;
-    color: #43887f;
+    background: #DBCCED5C;
+    border: 1px solid #1500A1;
+    color: #045CB4;
     font-size: 8px;
     border-radius: 20px;
     font-weight: 800;
@@ -580,7 +591,7 @@ main {
 
 .service-card h3 small {
     display: block;
-    color: #81909f;
+    color: #000000;
     letter-spacing: 0;
     font-size: 11px;
     font-weight: 520;
@@ -595,7 +606,7 @@ main {
 }
 
 .service-tags {
-    color: #8595a5;
+    color: #000000;
     font-size: 10px;
     margin-top: auto
 }
@@ -604,7 +615,7 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 6px;
-    color: #137c72;
+    color: #1500A1;
     border-top: 1px solid var(--line);
     font-size: 11px;
     font-weight: 850;
@@ -619,13 +630,13 @@ main {
 
 .footnote {
     font-size: 11px;
-    color: #8896a4;
+    color: #000000;
     line-height: 1.7;
     margin: 16px 2px 0
 }
 
 .footnote strong {
-    color: #54697b
+    color: #000000
 }
 
 .filters {
@@ -638,8 +649,8 @@ main {
 
 .search {
     height: 46px;
-    border: 1px solid #dbe5ea;
-    background: #fbfcfd;
+    border: 1px solid #111111;
+    background: #ffffff;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -648,13 +659,13 @@ main {
 }
 
 .search:focus-within {
-    border-color: #56b4a3;
-    box-shadow: 0 0 0 3px #e8f7f1
+    border-color: #045CB4;
+    box-shadow: 0 0 0 3px #DBCCED5C
 }
 
 .search>span {
     font-size: 25px;
-    color: #8ea1af
+    color: #000000
 }
 
 .search input {
@@ -668,8 +679,8 @@ main {
 
 .search kbd {
     font-size: 10px;
-    color: #93a4b3;
-    background: #eff3f5;
+    color: #000000;
+    background: #d4d4d636;
     border-radius: 5px;
     padding: 3px 7px
 }
@@ -684,7 +695,7 @@ main {
 .chip {
     background: white;
     color: #6a7c8e;
-    border: 1px solid #e1e9ef;
+    border: 1px solid #111111;
     border-radius: 25px;
     padding: 7px 12px;
     font-size: 10px;
@@ -692,13 +703,13 @@ main {
 }
 
 .chip:hover {
-    border-color: #9cd5c6
+    border-color: #045CB4
 }
 
 .chip.selected {
-    background: #e2f5ed;
-    border-color: #baeadc;
-    color: #147c6f
+    background: #DBCCED5C;
+    border-color: #1500A1;
+    color: #1500A1
 }
 
 .catalog-grid {
@@ -730,8 +741,8 @@ main {
     height: 39px;
     min-width: 39px;
     border-radius: 8px;
-    background: #e9f3f6;
-    color: #326781;
+    background: #DBCCED5C;
+    color: #045CB4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -748,7 +759,7 @@ main {
 
 .tool-type {
     font-size: 10px;
-    color: #8a9aa8;
+    color: #000000;
     margin-top: 3px
 }
 
@@ -764,7 +775,7 @@ main {
     padding-top: 12px;
     display: flex;
     justify-content: space-between;
-    color: #0e8274;
+    color: #1500A1;
     font-size: 11px;
     font-weight: 850
 }
@@ -778,7 +789,7 @@ main {
     padding: 26px;
     border-radius: 9px;
     background: white;
-    color: #668092;
+    color: #000000;
     text-align: center;
     font-size: 12px
 }
@@ -805,8 +816,8 @@ main {
     width: 37px;
     height: 37px;
     border-radius: 8px;
-    background: #dff7ef;
-    color: #178675;
+    background: #DBCCED5C;
+    color: #1500A1;
     font-weight: 900;
     font-size: 18px;
     display: flex;
@@ -823,7 +834,7 @@ main {
 
 .lab-card h3 span {
     font-size: 11px;
-    color: #149180;
+    color: #1500A1;
     letter-spacing: 0;
     display: block;
     margin-top: 3px
@@ -835,8 +846,8 @@ main {
 }
 
 .drop-file {
-    border: 1.5px dashed #a8d0cb;
-    background: #f7fbfa;
+    border: 1.5px dashed #045CB4;
+    background: #ffffff;
     min-height: 151px;
     border-radius: 9px;
     display: flex;
@@ -852,24 +863,24 @@ main {
 
 .drop-file.dragover,
 .drop-file:hover {
-    background: #eefaf5;
-    border-color: #23a28a
+    background: #DBCCED5C;
+    border-color: #045CB4
 }
 
 .upload-icon {
     font-size: 28px;
-    color: #168e7f;
+    color: #1500A1;
     line-height: 1
 }
 
 .drop-file strong {
     font-size: 11px;
-    color: #3d5769
+    color: #000000
 }
 
 .drop-file small {
     font-size: 10px;
-    color: #8a9bab
+    color: #000000
 }
 
 .drop-file input {
@@ -882,7 +893,7 @@ main {
 
 .file-detail {
     font-size: 10px;
-    color: #8b9ba8;
+    color: #000000;
     margin-bottom: 17px;
     overflow-wrap: anywhere
 }
@@ -890,26 +901,26 @@ main {
 .form-label {
     font-size: 11px;
     font-weight: 810;
-    color: #506377;
+    color: #000000;
     display: block;
     margin: 15px 0 7px
 }
 
 .field-input {
-    background: #fdfefe;
-    border: 1px solid #dae6eb;
+    background: #ffffff;
+    border: 1px solid #111111;
     border-radius: 7px;
     padding: 11px 12px;
     font-size: 11px;
-    color: #25384a;
+    color: #000000;
     width: 100%;
     min-width: 0;
     outline: none
 }
 
 .field-input:focus {
-    border-color: #1da38b;
-    box-shadow: 0 0 0 3px #e6f8f2
+    border-color: #045CB4;
+    box-shadow: 0 0 0 3px #DBCCED5C
 }
 
 .textarea {
@@ -929,9 +940,9 @@ main {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     font: 11px/1.7 ui-monospace, Consolas, monospace;
-    border: 1px solid #e2ebef;
-    background: #f2f6f8;
-    color: #38566a;
+    border: 1px solid #111111;
+    background: #d4d4d636;
+    color: #000000;
     padding: 12px;
     border-radius: 8px;
     min-height: 42px
@@ -945,11 +956,11 @@ main {
 }
 
 .hash-status.ok {
-    color: #148570
+    color: #1500A1
 }
 
 .hash-status.error {
-    color: #b84747
+    color: #1500A1
 }
 
 .command-reference {
@@ -957,12 +968,12 @@ main {
     border-top: 1px solid var(--line);
     padding-top: 12px;
     font-size: 11px;
-    color: #50697c
+    color: #000000
 }
 
 .command-reference summary {
     font-weight: 820;
-    color: #148474;
+    color: #1500A1;
     cursor: pointer
 }
 
@@ -973,8 +984,8 @@ main {
 }
 
 .command-reference pre {
-    background: #14233f;
-    color: #d7ede7;
+    background: #1500A1;
+    color: #ffffff;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     border-radius: 7px;
@@ -989,7 +1000,7 @@ main {
 
 .app-feature {
     border-radius: 14px;
-    background: linear-gradient(120deg, #12223c, #1e4058);
+    background: linear-gradient(120deg, #1500A1, #045CB4);
     color: white;
     display: flex;
     gap: 34px;
@@ -1009,7 +1020,7 @@ main {
 
 .app-feature p {
     font-size: 11.5px;
-    color: #b6cdd9;
+    color: #ffffff;
     line-height: 1.75
 }
 
@@ -1020,8 +1031,8 @@ main {
 .tag-success {
     display: inline-block;
     border-radius: 25px;
-    background: #2d5d57;
-    color: #b8f7de;
+    background: #045CB4;
+    color: #ffffff;
     font-size: 9px;
     letter-spacing: .07em;
     padding: 6px 11px;
@@ -1045,22 +1056,22 @@ main {
     width: 141px;
     height: 141px;
     border-radius: 50%;
-    border: 1px dashed #75d4c789
+    border: 1px dashed #ffffff89
 }
 
 .app-orbit:after {
     width: 95px;
     height: 95px;
     border-style: solid;
-    border-color: #66bec357
+    border-color: #ffffff57
 }
 
 .app-orbit span {
     position: absolute;
-    border: 1px solid #66c4b47c;
+    border: 1px solid #ffffff7c;
     border-radius: 7px;
-    background: #1c3952;
-    color: #d4f6eb;
+    background: #045CB4;
+    color: #ffffff;
     padding: 7px 10px;
     font: 800 11px Consolas, monospace
 }
@@ -1076,7 +1087,7 @@ main {
     border: none;
     background: transparent;
     font-size: 27px;
-    color: #6bdbba
+    color: #ffffff
 }
 
 .app-orbit span:nth-child(3) {
@@ -1095,7 +1106,7 @@ main {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    background: #fff;
+    background: #ffffff;
     border: 1px solid var(--line);
     border-radius: 9px;
     padding: 16px 12px;
@@ -1107,34 +1118,34 @@ main {
     border-radius: 6px;
     padding: 7px;
     font: 850 10px ui-monospace, monospace;
-    color: #91a0ad;
-    background: #f2f5f6
+    color: #000000;
+    background: #d4d4d636
 }
 
 .step.done {
-    color: #128b73;
-    background: #e1f8ef
+    color: #1500A1;
+    background: #DBCCED5C
 }
 
 .roadmap strong {
     font-size: 10.5px;
-    color: #3f5264;
+    color: #000000;
     line-height: 1.4
 }
 
 .roadmap small {
     display: block;
-    color: #8b9ba9;
+    color: #000000;
     font-size: 9.5px;
     line-height: 1.4;
     margin-top: 3px
 }
 
 .security-note {
-    border: 1px solid #ecddba;
-    background: #fff9ed;
+    border: 1px solid #111111;
+    background: #ffffff9ed;
     border-radius: 8px;
-    color: #816b47;
+    color: #000000;
     padding: 13px 16px;
     font-size: 11px;
     line-height: 1.7;
@@ -1145,7 +1156,7 @@ main {
     border-radius: 12px;
     border: 1px solid var(--line);
     overflow: hidden;
-    background: #fff
+    background: #ffffff
 }
 
 .resources>a {
@@ -1160,7 +1171,7 @@ main {
 }
 
 .resources>a:hover {
-    background: #f8fbfa
+    background: #d4d4d636
 }
 
 .resource-symbol {
@@ -1170,9 +1181,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #eaf3f6;
+    background: #DBCCED5C;
     border-radius: 8px;
-    color: #306a7e;
+    color: #045CB4;
     font-weight: 900;
     font-size: 11px
 }
@@ -1184,13 +1195,13 @@ main {
 
 .resources strong {
     font-size: 12px;
-    color: #30495d;
+    color: #000000;
     display: block
 }
 
 .resources small {
     font-size: 10.5px;
-    color: #7c8c99;
+    color: #000000;
     display: block;
     margin-top: 3px;
     line-height: 1.5
@@ -1198,7 +1209,7 @@ main {
 
 .resources i {
     font-style: normal;
-    color: #149888;
+    color: #1500A1;
     font-size: 19px
 }
 
@@ -1208,7 +1219,7 @@ main {
     justify-content: space-between;
     gap: 18px;
     border-radius: 11px;
-    background: #eaf1f4;
+    background: #d4d4d636;
     padding: 23px 26px;
     margin-top: 19px
 }
@@ -1226,7 +1237,7 @@ main {
 }
 
 .guide-callout code {
-    color: #147e75
+    color: #1500A1
 }
 
 .footer {
@@ -1239,12 +1250,12 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     font-size: 11px;
-    color: #8192a2
+    color: #000000
 }
 
 .footer strong {
     font-size: 12px;
-    color: #3f586d
+    color: #000000
 }
 
 .footer p {
@@ -1253,7 +1264,7 @@ main {
 }
 
 .footer a {
-    color: #128373;
+    color: #1500A1;
     font-weight: 850
 }
 
@@ -1354,7 +1365,7 @@ body.embed .hero-content {
         width: 260px;
         transform: translateX(-105%);
         transition: transform .2s;
-        box-shadow: 16px 0 30px #101d3c19
+        box-shadow: 16px 0 30px #1500A119
     }
 
     .sidebar.open {
@@ -1367,9 +1378,9 @@ body.embed .hero-content {
         top: 19px;
         right: 10px;
         padding: 1px 9px;
-        background: #eef5f5;
+        background: #d4d4d636;
         border: none;
-        color: #36566b;
+        color: #000000;
         border-radius: 7px;
         font-size: 23px
     }
@@ -1383,7 +1394,7 @@ body.embed .hero-content {
         display: block;
         border: 0;
         border-radius: 7px;
-        background: #edf7f5;
+        background: #DBCCED5C;
         padding: 7px 11px;
         font-size: 16px
     }
@@ -1567,7 +1578,7 @@ body.embed .hero-content {
     gap: 8px;
     margin-top: auto;
     padding-top: 13px;
-    border-top: 1px solid #eaf0f4;
+    border-top: 1px solid #111111;
 }
 
 .tool-card .tool-actions>a {
@@ -1578,10 +1589,10 @@ body.embed .hero-content {
     gap: 6px;
     margin-top: 0;
     padding: 9px 11px;
-    border: 1px solid #dbe5e8;
+    border: 1px solid #111111;
     border-radius: 7px;
-    background: #f1f5f8;
-    color: #176b79;
+    background: #d4d4d636;
+    color: #045CB4;
     font-size: 11px;
     font-weight: 800;
     text-align: center;
@@ -1590,11 +1601,61 @@ body.embed .hero-content {
 }
 
 .tool-card .tool-actions>a.manual-button {
-    background: #dff5ed;
-    color: #137f72;
-    border-color: #b7e4d5;
+    background: #DBCCED5C;
+    color: #1500A1;
+    border-color: #1500A1;
 }
 
 .tool-card .tool-actions>a:hover {
     filter: brightness(0.96);
 }
+
+/* Ajustes finais da paleta institucional */
+:root {
+    color: var(--text);
+}
+body {
+    color: var(--text);
+    background: var(--subtle-bg);
+}
+h1, h2, h3, .section-title h2, .service-card h3, .lab-card h3,
+.guide-callout h3, .app-feature h3 {
+    color: var(--heading);
+}
+p, .identity-caption, .side-caption, .side-nav a, .top-links,
+.crumb, .tool-type, .service-card p, .tool-card p, .lab-card > p {
+    color: var(--text);
+}
+.sidebar, .topbar, .metrics, .service-card, .filters, .tool-card,
+.lab-card, .resources, .empty, .roadmap > div {
+    background: var(--custom-1);
+}
+.identity, .side-footer, .topbar, .metrics, .metrics > div + div,
+.service-card, .tool-card, .lab-card, .resources, .footer,
+.command-reference, .tool-card .tool-actions {
+    border-color: var(--border);
+}
+.side-nav a.active, .chip.selected, .lab-icon, .tool-initials,
+.resource-symbol, .guide-callout, .step.done, .drop-file,
+.search:focus-within {
+    background-color: var(--surface-primary);
+}
+.btn-mint, .btn-dark, .tool-card .tool-actions > a.manual-button {
+    background: var(--brand);
+    color: var(--custom-1);
+}
+.btn-light, .tool-card .tool-actions > a {
+    background: var(--surface-secondary);
+    color: var(--brand);
+}
+a, .service-card a, .tool-card a, .resources i, .footer a,
+.command-reference summary, .guide-callout code {
+    color: var(--brand);
+}
+
+   
+
+    
+    
+    
+    
