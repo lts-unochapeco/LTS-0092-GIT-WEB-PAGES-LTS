@@ -1,0 +1,449 @@
+/* LTS | Design institucional preservado; escopo exclusivo do portfólio.
+   Remover todas as versões anteriores do CSS antes de publicar. */
+
+#lts-servicos-portfolio {
+    --lts-brand: #1500A1;
+    --lts-brand-alt: #045CB4;
+    --lts-heading: #1500A1;
+    --lts-text: #000000;
+    --lts-surface-primary: #DBCCED5C;
+    --lts-surface-secondary: #d4d4d636;
+    --lts-border: #111111;
+    --lts-subtle-bg: #d1d5db;
+    --lts-custom-1: #ffffff;
+    --lts-surface: var(--lts-custom-1);
+    --lts-canvas: var(--lts-custom-1);
+    --lts-on-brand: var(--lts-custom-1);
+    --lts-shadow: 0 2px 8px rgba(0, 0, 0, .036);
+    color-scheme: light;
+}
+
+#lts-servicos-portfolio,
+#lts-servicos-portfolio * {
+    box-sizing: border-box;
+}
+
+#lts-servicos-portfolio {
+    margin: 0;
+    background: var(--lts-canvas);
+    color: var(--lts-text);
+    font: 16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+#lts-servicos-portfolio a {
+    color: var(--lts-brand);
+    text-underline-offset: 3px;
+}
+
+#lts-servicos-portfolio a:focus-visible,
+#lts-servicos-portfolio button:focus-visible,
+#lts-servicos-portfolio summary:focus-visible {
+    outline: 3px solid var(--lts-brand-alt);
+    outline-offset: 4px;
+}
+
+#lts-servicos-portfolio .lts-svc-wrap {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 28px;
+}
+
+#lts-servicos-portfolio .lts-svc-hero {
+    background: linear-gradient(119deg,var(--lts-brand) 8%,var(--lts-brand-alt) 100%);
+    color: var(--lts-on-brand);
+    padding: 60px 0;
+}
+
+#lts-servicos-portfolio .lts-svc-hero-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+#lts-servicos-portfolio .lts-svc-kicker {
+    font-size: 12px;
+    color: var(--lts-on-brand);
+    text-transform: uppercase;
+    font-weight: 750;
+    letter-spacing: 1.6px;
+}
+
+#lts-servicos-portfolio h1 {
+    font-size: clamp(34px,5vw,58px);
+    line-height: 1.08;
+    margin: 12px 0 18px;
+    letter-spacing: -1.8px;
+}
+
+#lts-servicos-portfolio .lts-svc-hero p,
+#lts-servicos-portfolio .lts-svc-hero li {
+    color: var(--lts-on-brand);
+}
+
+#lts-servicos-portfolio .lts-svc-side {
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .08);
+}
+
+#lts-servicos-portfolio .lts-svc-side h2 {
+    font-size: 18px;
+    color: var(--lts-on-brand);
+    margin: 0;
+}
+
+#lts-servicos-portfolio .lts-svc-button {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px 18px;
+    background: var(--lts-surface);
+    color: var(--lts-brand);
+    text-decoration: none;
+    font-weight: 750;
+    margin-top: 12px;
+}
+
+#lts-servicos-portfolio .lts-svc-section {
+    padding: 44px 0;
+}
+
+#lts-servicos-portfolio h2 {
+    font-size: clamp(25px,3vw,34px);
+    line-height: 1.2;
+    letter-spacing: -.6px;
+    color: var(--lts-heading);
+    margin: 0 0 14px;
+}
+
+#lts-servicos-portfolio .lts-svc-lead {
+    color: var(--lts-text);
+    max-width: 850px;
+}
+
+#lts-servicos-portfolio .lts-svc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 18px 0;
+}
+
+#lts-servicos-portfolio .lts-svc-toolbar span {
+    font-size: 14px;
+    color: var(--lts-text);
+}
+
+#lts-servicos-portfolio button {
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--lts-brand);
+    border: 1px solid var(--lts-border);
+    border-radius: 8px;
+    background: var(--lts-surface);
+    padding: 8px 12px;
+}
+
+#lts-servicos-portfolio .lts-svc-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+#lts-servicos-portfolio .lts-svc-service {
+    background: var(--lts-surface);
+    padding: 22px;
+    border: 1px solid var(--lts-border);
+    border-radius: 13px;
+    box-shadow: var(--lts-shadow);
+    scroll-margin-top: 20px;
+}
+
+#lts-servicos-portfolio .lts-svc-service-head {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+#lts-servicos-portfolio .lts-svc-number {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 38px;
+    height: 38px;
+    background: var(--lts-surface-primary);
+    color: var(--lts-brand);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+#lts-servicos-portfolio h3 {
+    font-size: 21px;
+    line-height: 1.3;
+    color: var(--lts-heading);
+    margin: 0 0 8px;
+    letter-spacing: -.3px;
+}
+
+#lts-servicos-portfolio .lts-svc-subtitle {
+    font-size: 15px;
+    color: var(--lts-text);
+    margin: 0 0 12px;
+}
+
+#lts-servicos-portfolio details {
+    border-top: 1px solid var(--lts-subtle-bg);
+    padding-top: 12px;
+}
+
+#lts-servicos-portfolio summary {
+    color: var(--lts-brand);
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+#lts-servicos-portfolio .lts-svc-detail {
+    font-size: 15px;
+}
+
+#lts-servicos-portfolio .lts-svc-detail h4,
+#lts-servicos-portfolio .lts-svc-detail dt {
+    font-size: 14px;
+    color: var(--lts-heading);
+    font-weight: 750;
+    margin: 16px 0 4px;
+}
+
+#lts-servicos-portfolio .lts-svc-detail ul {
+    padding-left: 20px;
+}
+
+#lts-servicos-portfolio .lts-svc-detail li {
+    margin-bottom: 6px;
+}
+
+#lts-servicos-portfolio .lts-svc-detail dd {
+    margin: 4px 0 12px;
+}
+
+#lts-servicos-portfolio .lts-svc-condition {
+    font-size: 14px;
+    border-left: 3px solid var(--lts-brand-alt);
+    background: var(--lts-surface-primary);
+    padding: 10px 12px;
+    border-radius: 0 6px 6px 0;
+}
+
+#lts-servicos-portfolio .lts-svc-white {
+    background: var(--lts-surface);
+    border-block: 1px solid var(--lts-border);
+}
+
+#lts-servicos-portfolio .lts-svc-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 14px;
+}
+
+#lts-servicos-portfolio .lts-svc-mini {
+    background: var(--lts-surface);
+    border: 1px solid var(--lts-border);
+    border-radius: 11px;
+    padding: 18px;
+}
+
+#lts-servicos-portfolio .lts-svc-mini h3 {
+    font-size: 17px;
+}
+
+#lts-servicos-portfolio .lts-svc-mini p {
+    font-size: 14px;
+    color: var(--lts-text);
+    margin: 0;
+}
+
+#lts-servicos-portfolio .lts-svc-step {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--lts-brand-alt);
+}
+
+#lts-servicos-portfolio .lts-svc-cta {
+    background: linear-gradient(119deg,var(--lts-brand) 8%,var(--lts-brand-alt) 100%);
+    color: var(--lts-on-brand);
+    padding: 44px 0;
+}
+
+#lts-servicos-portfolio .lts-svc-cta h2 {
+    color: var(--lts-on-brand);
+}
+
+#lts-servicos-portfolio .lts-svc-cta p {
+    color: var(--lts-on-brand);
+    max-width: 850px;
+}
+
+#lts-servicos-portfolio .lts-svc-contact a {
+    color: var(--lts-on-brand);
+}
+
+@media (max-width:800px) {
+    #lts-servicos-portfolio .lts-svc-grid,
+    #lts-servicos-portfolio .lts-svc-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #lts-servicos-portfolio .lts-svc-mini-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    #lts-servicos-portfolio .lts-svc-wrap {
+        padding-inline: 18px;
+    }
+
+    #lts-servicos-portfolio .lts-svc-hero {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width:440px) {
+    #lts-servicos-portfolio .lts-svc-mini-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #lts-servicos-portfolio .lts-svc-service {
+        padding: 17px;
+    }
+
+    #lts-servicos-portfolio h3 {
+        font-size: 19px;
+    }
+}
+
+#lts-servicos-portfolio .lts-svc-hero h1,
+#lts-servicos-portfolio .lts-svc-hero .lts-svc-kicker,
+#lts-servicos-portfolio .lts-svc-hero .lts-svc-side h2,
+#lts-servicos-portfolio .lts-svc-hero .lts-svc-side li,
+#lts-servicos-portfolio .lts-svc-cta h2,
+#lts-servicos-portfolio .lts-svc-cta p,
+#lts-servicos-portfolio .lts-svc-cta .lts-svc-contact a {
+    color: var(--lts-on-brand);
+}
+
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-toolbar button {
+    background: var(--lts-surface);
+    color: var(--lts-brand);
+    border-color: var(--lts-brand);
+}
+
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-toolbar #lts-svc-expand {
+    background: var(--lts-brand);
+    color: var(--lts-on-brand);
+}
+
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-toolbar #lts-svc-expand:hover {
+    background: var(--lts-brand-alt);
+    border-color: var(--lts-brand-alt);
+}
+
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-toolbar #lts-svc-collapse:hover {
+    background: var(--lts-surface-primary);
+    border-color: var(--lts-brand-alt);
+}
+
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-toolbar #lts-svc-collapse:active {
+    background: var(--lts-surface-secondary);
+}
+
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-service details[open] > summary,
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-service summary:hover {
+    color: var(--lts-brand-alt);
+}
+
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-service details:not([open]) > .lts-svc-detail {
+    display: none;
+}
+
+#lts-servicos-portfolio #lts-svc-servicos .lts-svc-service details[open] > .lts-svc-detail {
+    display: block;
+}
+
+#lts-servicos-portfolio .lts-svc-hero a:focus-visible,
+#lts-servicos-portfolio .lts-svc-cta a:focus-visible {
+    outline-color: var(--lts-on-brand);
+}
+
+#lts-servicos-portfolio .lts-svc-hero .lts-svc-button:hover,
+#lts-servicos-portfolio .lts-svc-cta .lts-svc-button:hover {
+    background: var(--lts-surface-primary);
+    background: linear-gradient(var(--lts-surface-primary), var(--lts-surface-primary)), var(--lts-surface);
+    color: var(--lts-brand);
+}
+
+/* Proteção local contra estilos genéricos do tema. Não atinge o cabeçalho ou rodapé. */
+#lts-servicos-portfolio {
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+}
+#lts-servicos-portfolio h1,
+#lts-servicos-portfolio h2,
+#lts-servicos-portfolio h3 {
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: none;
+}
+#lts-servicos-portfolio p,
+#lts-servicos-portfolio ul,
+#lts-servicos-portfolio dl {
+    margin-block: 1em;
+}
+#lts-servicos-portfolio p { font-family: inherit; }
+#lts-servicos-portfolio .lts-svc-hero ul { padding-inline-start: 40px; list-style: disc outside; }
+#lts-servicos-portfolio .lts-svc-detail ul { list-style: disc outside; }
+#lts-servicos-portfolio .lts-svc-subtitle { margin: 0 0 12px; }
+#lts-servicos-portfolio .lts-svc-mini p { margin: 0; }
+#lts-servicos-portfolio .lts-svc-hero,
+#lts-servicos-portfolio .lts-svc-section,
+#lts-servicos-portfolio .lts-svc-cta { margin: 0; }
+#lts-servicos-portfolio .lts-svc-service,
+#lts-servicos-portfolio .lts-svc-mini { margin: 0; min-width: 0; }
+#lts-servicos-portfolio .lts-svc-service-head > div,
+#lts-servicos-portfolio .lts-svc-hero-grid > * { min-width: 0; }
+#lts-servicos-portfolio .lts-svc-toolbar > div { display: flex; flex-wrap: wrap; gap: 6px; }
+#lts-servicos-portfolio .lts-svc-toolbar button { line-height: 1.65; text-transform: none; font-weight: 400; box-shadow: none; }
+#lts-servicos-portfolio .lts-svc-toolbar button:focus-visible,
+#lts-servicos-portfolio summary:focus-visible { outline: 3px solid var(--lts-brand-alt); outline-offset: 4px; }
+#lts-servicos-portfolio .lts-svc-service summary { display: list-item; list-style: disclosure-closed; }
+#lts-servicos-portfolio .lts-svc-service details[open] > summary { list-style-type: disclosure-open; }
+#lts-servicos-portfolio .lts-svc-button { line-height: 1.65; text-transform: none; }
+#lts-servicos-portfolio .lts-svc-contact { overflow-wrap: anywhere; }
+/* Layout adaptável também quando o conteúdo é mais estreito que a janela. */
+@supports (container-type: inline-size) {
+    #lts-servicos-portfolio { container-type: inline-size; }
+    @container (max-width: 800px) {
+        #lts-servicos-portfolio .lts-svc-grid,
+        #lts-servicos-portfolio .lts-svc-hero-grid { grid-template-columns: minmax(0, 1fr); }
+        #lts-servicos-portfolio .lts-svc-mini-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        #lts-servicos-portfolio .lts-svc-wrap { padding-inline: 18px; }
+        #lts-servicos-portfolio .lts-svc-hero { padding: 40px 0; }
+    }
+    @container (max-width: 440px) {
+        #lts-servicos-portfolio .lts-svc-mini-grid { grid-template-columns: minmax(0, 1fr); }
+        #lts-servicos-portfolio .lts-svc-service { padding: 17px; }
+        #lts-servicos-portfolio h3 { font-size: 19px; }
+        #lts-servicos-portfolio .lts-svc-mini h3 { font-size: 17px; }
+    }
+}
