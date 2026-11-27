@@ -319,13 +319,6 @@
         grid-template-columns: 1fr;
     }
 
-    #lts-servicos-portfolio .lts-svc-service {
-        padding: 17px;
-    }
-
-    #lts-servicos-portfolio h3 {
-        font-size: 19px;
-    }
 }
 
 #lts-servicos-portfolio .lts-svc-hero h1,
@@ -442,8 +435,121 @@
     }
     @container (max-width: 440px) {
         #lts-servicos-portfolio .lts-svc-mini-grid { grid-template-columns: minmax(0, 1fr); }
-        #lts-servicos-portfolio .lts-svc-service { padding: 17px; }
-        #lts-servicos-portfolio h3 { font-size: 19px; }
         #lts-servicos-portfolio .lts-svc-mini h3 { font-size: 17px; }
+    }
+}
+
+/* Dimensoes harmonizadas com a pagina Ferramentas.
+   Largura externa acompanha o mesmo conteiner do WordPress (ou do iframe).
+   A altura e automatica para manter todo o conteudo acessivel. */
+#lts-servicos-portfolio {
+    --lts-layout-max: 1180px;
+    --lts-layout-gutter: 28px;
+    --lts-layout-gap: 18px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow-wrap: anywhere;
+}
+#lts-servicos-portfolio .lts-svc-hero,
+#lts-servicos-portfolio .lts-svc-section,
+#lts-servicos-portfolio .lts-svc-cta {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+}
+#lts-servicos-portfolio .lts-svc-wrap {
+    width: 100%;
+    max-width: var(--lts-layout-max);
+    margin: 0 auto;
+    padding-inline: var(--lts-layout-gutter);
+}
+#lts-servicos-portfolio .lts-svc-grid { gap: var(--lts-layout-gap); }
+#lts-servicos-portfolio .lts-svc-lead { max-width: 900px; }
+#lts-servicos-portfolio .lts-svc-cta { padding-block: 40px; }
+#lts-servicos-portfolio .lts-svc-side ul { margin: 0; padding-left: 21px; }
+#lts-servicos-portfolio .lts-svc-side li { margin-bottom: 8px; }
+#lts-servicos-portfolio .lts-svc-toolbar button,
+#lts-servicos-portfolio .lts-svc-button {
+    min-height: 40px;
+    padding: 9px 14px;
+    font: 650 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;
+    max-width: 100%;
+}
+/* Viewport fallback mirrors Ferramentas. */
+@media (max-width: 800px) {
+    #lts-servicos-portfolio { --lts-layout-gutter: 18px; }
+    #lts-servicos-portfolio .lts-svc-hero { padding-block: 42px; }
+    #lts-servicos-portfolio .lts-svc-hero-grid { gap: 22px; }
+    #lts-servicos-portfolio .lts-svc-section { padding-block: 34px; }
+    #lts-servicos-portfolio .lts-svc-service { padding: 18px; }
+}
+@media (max-width: 420px) {
+    #lts-servicos-portfolio { --lts-layout-gutter: 13px; }
+    #lts-servicos-portfolio h1 { font-size: 34px; letter-spacing: -1px; }
+    #lts-servicos-portfolio h3 { font-size: 19px; }
+    #lts-servicos-portfolio .lts-svc-service-head { gap: 10px; }
+    #lts-servicos-portfolio .lts-svc-service { padding: 15px; }
+    #lts-servicos-portfolio .lts-svc-side { padding: 16px; }
+}
+/* Dentro do WordPress, o espaco disponivel pode ser menor que a janela.
+   As regras de conteiner reproduzem a largura que um iframe teria. */
+@supports (container-type: inline-size) {
+    #lts-servicos-portfolio { container-type: inline-size; }
+    #lts-servicos-portfolio h1 { font-size: clamp(34px, 5cqw, 58px); }
+    #lts-servicos-portfolio h2 { font-size: clamp(25px, 3cqw, 34px); }
+    @container (max-width: 800px) {
+        #lts-servicos-portfolio .lts-svc-wrap { padding-inline: 18px; }
+        #lts-servicos-portfolio .lts-svc-hero { padding-block: 42px; }
+        #lts-servicos-portfolio .lts-svc-hero-grid { gap: 22px; }
+        #lts-servicos-portfolio .lts-svc-section { padding-block: 34px; }
+        #lts-servicos-portfolio .lts-svc-service { padding: 18px; }
+    }
+    @container (max-width: 420px) {
+        #lts-servicos-portfolio .lts-svc-wrap { padding-inline: 13px; }
+        #lts-servicos-portfolio h1 { font-size: 34px; letter-spacing: -1px; }
+        #lts-servicos-portfolio h3 { font-size: 19px; }
+        #lts-servicos-portfolio .lts-svc-service-head { gap: 10px; }
+        #lts-servicos-portfolio .lts-svc-service { padding: 15px; }
+        #lts-servicos-portfolio .lts-svc-side { padding: 16px; }
+    }
+}
+
+/* CORRECAO DE LARGURA EXTERNA — exclusiva da pagina de Servicos.
+   Altera a largura REAL do componente, nao apenas o limite interno.
+   Ajuste --lts-page-max ao valor medido do iframe de Ferramentas, se desejado.
+   O valor padrao permite usar toda a largura visivel, com respiro lateral. */
+#lts-servicos-portfolio {
+    --lts-page-max: 100vw;
+    --lts-page-gutter: 16px;
+    --lts-available-width: var(--lts-measured-viewport, calc(100vw - 16px));
+    --lts-outer-width: min(var(--lts-page-max), calc(var(--lts-available-width) - 2 * var(--lts-page-gutter)));
+    display: block;
+    width: var(--lts-outer-width) !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex: 0 0 auto;
+    margin-inline: calc((100% - var(--lts-outer-width)) / 2) !important;
+    position: relative;
+    left: var(--lts-center-shift, 0px);
+    right: auto;
+    padding: 0;
+}
+#lts-servicos-portfolio .lts-svc-wrap {
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+}
+@media (max-width: 800px) {
+    #lts-servicos-portfolio { --lts-page-gutter: 8px; }
+}
+@media print {
+    #lts-servicos-portfolio {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: 0 !important;
+        left: 0 !important;
     }
 }
