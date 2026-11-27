@@ -1,0 +1,33 @@
+<!-- Substitua o conteúdo anterior da página Ferramentas por este bloco HTML.
+     Não adicione cabeçalho/rodapé próprios; o WordPress fornece ambos. -->
+<div id="lts-tools-embed" style="width:100%;max-width:100%;margin:0 auto;">
+  <iframe id="lts-tools-frame"
+    title="Ferramentas e recursos técnicos"
+    src="https://lts-unochapeco.github.io/LTS-0092-GIT-WEB-PAGES-LTS/ferramentas/"
+    style="display:block;width:100%;height:1150px;border:0;background:#fff;"
+    loading="lazy"
+    allow="clipboard-write"
+    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <p style="text-align:center;margin:12px 0;"><a href="https://lts-unochapeco.github.io/LTS-0092-GIT-WEB-PAGES-LTS/ferramentas/" target="_blank" rel="noopener noreferrer">Abrir ferramentas em uma nova aba</a></p>
+</div>
+<script>
+(function () {
+  'use strict';
+  var frame = document.getElementById('lts-tools-frame');
+  if (!frame || frame.dataset.resizeBound) return;
+  frame.dataset.resizeBound = 'true';
+  window.addEventListener('message', function (event) {
+    if (event.origin !== 'https://lts-unochapeco.github.io' || event.source !== frame.contentWindow) return;
+    var data = event.data;
+    if (!data || data.type !== 'lts-ferramentas:resize' || typeof data.height !== 'number' || !Number.isFinite(data.height)) return;
+    if (data.height < 100 || data.height > 50000) return;
+    frame.style.height = Math.ceil(data.height + 4) + 'px';
+  });
+  // Solicita nova medição caso o iframe já tenha carregado antes do listener.
+  function requestHeight() {
+    if (frame.contentWindow) frame.contentWindow.postMessage({type:'lts-ferramentas:request-height'}, 'https://lts-unochapeco.github.io');
+  }
+  frame.addEventListener('load', requestHeight);
+  requestHeight();
+})();
+</script>

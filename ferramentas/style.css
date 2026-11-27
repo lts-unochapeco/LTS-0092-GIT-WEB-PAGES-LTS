@@ -1,0 +1,75 @@
+/* Design baseado na pagina de Servicos. Escopo exclusivo: #lts-ferramentas. */
+#lts-ferramentas{--tf-brand:#1500A1;--tf-alt:#045CB4;--tf-text:#000000;--tf-white:#ffffff;--tf-soft:#DBCCED5C;--tf-neutral:#d4d4d636;--tf-border:#111111;--tf-line:#d1d5db;--tf-shadow:0 2px 8px rgba(0,0,0,.036);background:var(--tf-white);color:var(--tf-text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;margin:0;color-scheme:light;overflow-wrap:anywhere}
+#lts-ferramentas,#lts-ferramentas *{box-sizing:border-box}
+#lts-ferramentas [hidden]{display:none!important}
+#lts-ferramentas .tf-wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+#lts-ferramentas h1,#lts-ferramentas h2,#lts-ferramentas h3,#lts-ferramentas h4{color:var(--tf-brand);margin:0 0 12px;line-height:1.25;font-weight:750}
+#lts-ferramentas h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-1.8px;margin:12px 0 18px}
+#lts-ferramentas h2{font-size:clamp(25px,3vw,34px);letter-spacing:-.6px}
+#lts-ferramentas h3{font-size:21px;letter-spacing:-.3px;margin-bottom:8px}
+#lts-ferramentas h4{font-size:15px;margin:10px 0 5px}
+#lts-ferramentas p{margin:0 0 14px;color:inherit}
+#lts-ferramentas a{color:var(--tf-brand);text-underline-offset:3px}
+#lts-ferramentas :is(a,button,summary,input,textarea,select):focus-visible{outline:3px solid var(--tf-alt);outline-offset:3px}
+#lts-ferramentas .tf-hero{background:linear-gradient(119deg,var(--tf-brand) 8%,var(--tf-alt) 100%);color:var(--tf-white);padding:60px 0}
+#lts-ferramentas .tf-hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:35px;align-items:center}
+#lts-ferramentas .tf-hero h1,#lts-ferramentas .tf-hero h2,#lts-ferramentas .tf-cta h2{color:var(--tf-white)}
+#lts-ferramentas .tf-kicker{font-size:12px;font-weight:750;text-transform:uppercase;letter-spacing:1.6px}
+#lts-ferramentas .tf-side{padding:22px;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.08);border-radius:15px}
+#lts-ferramentas .tf-side h2{font-size:18px;letter-spacing:0}
+#lts-ferramentas .tf-side ul,#lts-ferramentas .tf-list{margin:0;padding-left:21px}
+#lts-ferramentas .tf-side li,#lts-ferramentas .tf-list li{margin-bottom:8px}
+#lts-ferramentas .tf-jump nav{display:flex;flex-wrap:wrap;gap:8px 22px;border-bottom:1px solid var(--tf-line);padding:15px 0}
+#lts-ferramentas .tf-jump nav a{font-size:14px;font-weight:650;text-decoration:none;padding:4px 0}
+#lts-ferramentas .tf-jump nav a:hover{text-decoration:underline}
+#lts-ferramentas .tf-section{padding:44px 0;scroll-margin-top:15px}
+#lts-ferramentas .tf-section:nth-of-type(odd){background:var(--tf-neutral)}
+#lts-ferramentas .tf-lead{max-width:900px;margin-bottom:22px}
+#lts-ferramentas .tf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+#lts-ferramentas .tf-card{background:var(--tf-white);border:1px solid var(--tf-border);border-radius:13px;padding:22px;box-shadow:var(--tf-shadow);min-width:0;display:flex;flex-direction:column;gap:4px}
+#lts-ferramentas .tf-card-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:4px}
+#lts-ferramentas .tf-number{display:grid;place-items:center;flex:none;min-width:38px;height:38px;padding:0 6px;border-radius:8px;background:var(--tf-soft);color:var(--tf-brand);font-size:14px;font-weight:800}
+#lts-ferramentas .tf-meta{font-size:12px;font-weight:650;color:var(--tf-brand)}
+#lts-ferramentas .tf-card p{font-size:15px}
+#lts-ferramentas .tf-card-head p{margin-bottom:10px}
+#lts-ferramentas .tf-small,#lts-ferramentas .tf-card .tf-small{font-size:13px;line-height:1.55}
+#lts-ferramentas details{border-top:1px solid var(--tf-line);padding-top:12px;margin-top:auto}
+#lts-ferramentas details summary{cursor:pointer;font-size:14px;font-weight:750;color:var(--tf-brand)}
+#lts-ferramentas .tf-detail{padding-top:8px}
+#lts-ferramentas .tf-toolbar,#lts-ferramentas .tf-command-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0}
+#lts-ferramentas .tf-toolbar span{font-size:14px}
+#lts-ferramentas .tf-actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:12px 0 8px}
+#lts-ferramentas .tf-tool .tf-actions,#lts-ferramentas .tf-app-actions{margin-top:auto;padding-top:10px;border-top:1px solid var(--tf-line)}
+#lts-ferramentas .tf-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:center;min-height:40px;max-width:100%;padding:9px 14px;border-radius:8px;font:650 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none;cursor:pointer;border:1px solid var(--tf-brand);background:var(--tf-white);color:var(--tf-brand)}
+#lts-ferramentas .tf-btn:hover:not(:disabled){filter:brightness(.96)}
+#lts-ferramentas .tf-btn:disabled{opacity:.5;cursor:not-allowed}
+#lts-ferramentas .tf-primary{background:var(--tf-brand);color:var(--tf-white)}
+#lts-ferramentas .tf-outline{border-color:var(--tf-brand);background:var(--tf-white);color:var(--tf-brand)}
+#lts-ferramentas .tf-white{background:var(--tf-white);color:var(--tf-brand);border-color:var(--tf-white)}
+#lts-ferramentas .tf-hero-outline{background:transparent;color:var(--tf-white);border-color:var(--tf-white)}
+#lts-ferramentas .tf-hero :focus-visible,#lts-ferramentas .tf-cta :focus-visible{outline-color:var(--tf-white)}
+#lts-ferramentas .tf-note{border-left:3px solid var(--tf-alt);border-radius:0 8px 8px 0;padding:13px 16px;background:var(--tf-soft);font-size:14px;margin:15px 0}
+#lts-ferramentas .tf-unavailable{display:inline-block;font-size:13px;font-weight:650;color:var(--tf-text);background:var(--tf-neutral);border:1px solid var(--tf-line);padding:9px 12px;border-radius:8px}
+#lts-ferramentas fieldset{border:0;margin:0;padding:0;min-width:0}
+#lts-ferramentas label{display:block;font-size:14px;font-weight:650;margin:13px 0 6px}
+#lts-ferramentas :is(input,textarea,select){width:100%;min-width:0;font:inherit;color:var(--tf-text);background:var(--tf-white);border:1px solid var(--tf-border);border-radius:7px;padding:10px 11px}
+#lts-ferramentas input[type=file]{font-size:14px;padding:8px}
+#lts-ferramentas textarea{resize:vertical}
+#lts-ferramentas #tf-hash-result,#lts-ferramentas #tf-hash-expected,#lts-ferramentas #tf-xml-input{font:13px/1.5 ui-monospace,Consolas,monospace}
+#lts-ferramentas .tf-command{padding:10px 0 13px;border-top:1px solid var(--tf-line)}
+#lts-ferramentas .tf-command-head{margin:0 0 7px;font-size:14px}
+#lts-ferramentas pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.55 ui-monospace,Consolas,monospace;background:var(--tf-neutral);padding:12px;border:1px solid var(--tf-line);border-radius:7px;margin:7px 0;min-height:42px;color:var(--tf-text)}
+#lts-ferramentas .tf-doclink{font-size:12px}
+#lts-ferramentas .tf-status{font-size:13px;font-weight:650;min-height:22px;margin:8px 0 0}
+#lts-ferramentas .tf-status[data-state=ok]{color:var(--tf-brand)}
+#lts-ferramentas .tf-status[data-state=error]{border-left:3px solid var(--tf-border);padding-left:8px;color:var(--tf-text)}
+#lts-ferramentas .tf-filter{background:var(--tf-white);padding:18px 20px;border:1px solid var(--tf-border);border-radius:13px;margin:0 0 18px}
+#lts-ferramentas .tf-filter label{margin-top:0}
+#lts-ferramentas .tf-chips{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0 5px}
+#lts-ferramentas .tf-chip{font:650 13px/1.35 system-ui,sans-serif;color:var(--tf-brand);background:var(--tf-white);border:1px solid var(--tf-border);border-radius:20px;padding:8px 12px;cursor:pointer;min-height:36px}
+#lts-ferramentas .tf-chip[aria-pressed=true]{background:var(--tf-soft);border:2px solid var(--tf-brand);padding:7px 11px}
+#lts-ferramentas .tf-cta{background:linear-gradient(119deg,var(--tf-brand) 8%,var(--tf-alt) 100%);color:var(--tf-white);padding:40px 0}
+#lts-ferramentas .tf-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:800px){#lts-ferramentas .tf-grid,#lts-ferramentas .tf-hero-grid{grid-template-columns:1fr}#lts-ferramentas .tf-wrap{padding:0 18px}#lts-ferramentas .tf-hero{padding:42px 0}#lts-ferramentas .tf-section{padding:34px 0}#lts-ferramentas .tf-hero-grid{gap:22px}#lts-ferramentas .tf-card{padding:18px}}
+@media(max-width:420px){#lts-ferramentas h1{font-size:34px;letter-spacing:-1px}#lts-ferramentas .tf-card-head{gap:10px}#lts-ferramentas h3{font-size:19px}#lts-ferramentas .tf-wrap{padding:0 13px}#lts-ferramentas .tf-card{padding:15px}#lts-ferramentas .tf-side{padding:16px}}
+@media print{#lts-ferramentas .tf-hero,#lts-ferramentas .tf-cta{background:white;color:black;padding:15px 0}#lts-ferramentas .tf-hero h1,#lts-ferramentas .tf-hero h2,#lts-ferramentas .tf-cta h2{color:var(--tf-brand)}#lts-ferramentas .tf-filter,#lts-ferramentas .tf-toolbar,#lts-ferramentas .tf-jump,#lts-ferramentas button{display:none!important}#lts-ferramentas .tf-grid{display:block}#lts-ferramentas .tf-card{break-inside:avoid;margin-bottom:12px;box-shadow:none}#lts-ferramentas .tf-section{padding:12px 0}}
